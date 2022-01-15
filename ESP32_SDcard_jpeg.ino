@@ -11,12 +11,8 @@ TFT_eSPI tft = TFT_eSPI();
 
 uint32_t icount = 0;
 
-
-
 #define ENABLE_SPI_SDCARD
 #ifdef ENABLE_SPI_SDCARD
-
-
 
 SPIClass SDSPI(HSPI);
 
@@ -50,12 +46,9 @@ void loop() {
 
 tft.setRotation(2);  // portrait
   tft.fillScreen(random(0xFFFF));
-  drawSdJpeg("/ui.jpg", 0, 0);     // This draws a jpeg pulled off the SD Card
+  drawSdJpeg("/example.jpg", 0, 0);     // This draws a jpeg pulled off the SD Card
   delay(2000);
 }
-
-
-
 
 //####################################################################################################
 // Draw a JPEG on the TFT pulled from SD Card
